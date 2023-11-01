@@ -1,6 +1,6 @@
 [
-    {"Id" : 1, "Name" :"Rehman", "Price" : 4500},
-    {"Id" : 1, "Name" :"Rehman", "Price" : 4500},
-    {"Id" : 1, "Name" :"Rehman", "Price" : 4500},
-    {"Id" : 1, "Name" :"Rehman", "Price" : 4500}
+    {"id" : 1, "name" :"Rehman", "price" : 4500, "image" : "modern-automobile-classic-technology-wheel-traffic_665346-119.avif"},
+    {"Id" : 2, "Name" :"Rehman", "Price" : 4500},
+    {"Id" : 3, "Name" :"Rehman", "Price" : 4500},
+    {"Id" : 4, "Name" :"Rehman", "Price" : 4500}
 ]

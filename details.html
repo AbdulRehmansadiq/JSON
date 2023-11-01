@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+<div class="row mt-5"></div>
+
+    </div>
+
+    <script>
+        let row1 =$('.row');
+        let url = location.href;
+        let obj = new URL (url);
+        let name = obj.searchParams.get('name');
+        let price = obj.searchParams.get('price');
+        let Image = obj.searchParams.get('image');
+        let des = obj.searchParams.get("des");
+        row1.html(`<div class="col mt-5">
+    <img class="card-img-top" src="+image" alt="">
+</div>
+<div class="col mt-5">
+    <div class="card-body">
+        <h4 class="class-tittle">`+name+`</h4>
+        <p class="card-text">`+price`</p>
+        <p class="card-text">`+des`</p>
+        <a href="details.html">Details</a>
+    </div>
+</div>
+        `)
+    </script>
+</body>
+</html>

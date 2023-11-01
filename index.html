@@ -4,31 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.min.css">
     <script src="Jquerry/Jquerry.js"></script>
     <script src="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
     <title>Document</title>
 </head>
 <body>
     <div class="container">
+        <div class="row" id = "Productrow1">
+            
+        </div>
 
-    <div class="Productrow1">
-            <div class="col-md-3 my-5"></div>
-    </div>
+    
     <script>
         
         let row1 = $("#Productrow1");
         let col1 = "";
-        $ajax () {
+        $.ajax({
             url : "Index.Json",
-            type : "get"
-            success : f (Parameter) data :any
-            $each (data, function (k,v) {
-                col1  = `
-                
-                `
+            type : "get",
+            success : function(data){
+            $.each (data, function (k,v){
+            col1 += `
+            <div class="col-md-3 my-5">
+                <div class="card">
+                    <img class="card-img-top" src="`+image`" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">`+name`</h4>
+                        <p class="card-text">`+price`</p>
+                        <a href= "details.html?id=`+id+`&name=`+name`&price=`+price`&image=`+image`">Details</a>
+                    </div>
+                </div>
+            </div>
+    </div>`
+}) 
             }
-        }
+        });
+        row1.html(col1);
+        
     </script>
 </div>
 </body>
